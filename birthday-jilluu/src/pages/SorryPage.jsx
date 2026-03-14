@@ -64,7 +64,7 @@ const SorryPage = ({ onBack, theme }) => {
 
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '15px', marginBottom: '40px', padding: '0 20px' }}>
                 <img
-                    src="/Image2.jpg"
+                    src={`${import.meta.env.BASE_URL}Image2.jpg`}
                     alt="Forgive me"
                     style={{
                         maxWidth: '90%',

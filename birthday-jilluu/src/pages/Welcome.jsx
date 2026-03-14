@@ -105,7 +105,7 @@ const Welcome = ({ onEnter, theme, onThemeChange }) => {
                         background: 'transparent'
                     }}
                 >
-                    <source src="/Video1.mp4" type="video/mp4" />
+                    <source src={`${import.meta.env.BASE_URL}Video1.mp4`} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>

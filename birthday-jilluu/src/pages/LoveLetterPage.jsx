@@ -57,7 +57,7 @@ const LoveLetterPage = ({ onBack, theme }) => {
 
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '0', marginBottom: '15px', padding: '0 20px' }}>
                 <img
-                    src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/Image1.jpg`}
+                    src={`${import.meta.env.BASE_URL}Image1.jpg`}
                     alt="Our precious moment"
                     style={{
                         maxWidth: '90%',

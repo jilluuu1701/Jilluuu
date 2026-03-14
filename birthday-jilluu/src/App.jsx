@@ -11,7 +11,7 @@ import './App.css'
 
 function App() {
   const [page, setPage] = useState('welcome')
-  const [theme, setTheme] = useState('lavender')
+  const [theme, setTheme] = useState('night')
 
   const renderPage = () => {
     switch(page) {
