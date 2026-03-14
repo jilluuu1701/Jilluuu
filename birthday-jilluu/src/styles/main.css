@@ -1,0 +1,130 @@
+body{
+margin:0;
+font-family: 'Poppins', sans-serif;
+}
+
+/* HOME PAGE */
+
+.home{
+height:100vh;
+background:url("/bg.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.enterBtn{
+padding:20px 40px;
+font-size:24px;
+background:#ff4da6;
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
+box-shadow:0 0 20px pink;
+transition:0.3s;
+}
+
+.enterBtn:hover{
+transform:scale(1.1);
+}
+
+/* NIGHT BACKGROUND */
+
+.night{
+height:100vh;
+background:linear-gradient(#050518,#090979,#000);
+overflow:hidden;
+position:relative;
+}
+
+/* MOON */
+
+.moon{
+position:absolute;
+top:80px;
+right:120px;
+width:120px;
+height:120px;
+background:white;
+border-radius:50%;
+box-shadow:0 0 60px white;
+}
+
+/* STARS */
+
+.star{
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+border-radius:50%;
+animation:blink 2s infinite;
+}
+
+@keyframes blink{
+0%,100%{opacity:0.2}
+50%{opacity:1}
+}
+
+/* NAME */
+
+.name3d{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:120px;
+color:#ff66cc;
+text-shadow:
+0 0 10px #ff66cc,
+0 0 20px #ff66cc,
+0 0 40px #ff1493;
+display:flex;
+gap:10px;
+}
+
+.name3d span{
+cursor:pointer;
+transition:0.3s;
+}
+
+.name3d span:hover{
+transform:scale(1.2);
+}
+
+/* POPUP */
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.popupBox{
+background:transparent;
+color:white;
+padding:40px;
+border-radius:20px;
+text-align:center;
+max-width:400px;
+box-shadow:none;
+}
+
+.popup button{
+margin-top:20px;
+padding:10px 20px;
+background:#ff4da6;
+border:none;
+color:white;
+border-radius:20px;
+cursor:pointer;
+}

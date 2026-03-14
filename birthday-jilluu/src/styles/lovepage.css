@@ -1,0 +1,346 @@
+/* lovepage.css - Layout specific to LovePage */
+.love-page-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Ensure content starts from top for scrolling */
+    padding: 0;
+}
+
+.message-box {
+    padding: clamp(60px, 8vh, 100px) 20px;
+    width: 100%;
+    max-width: 1200px; /* Limit width on very large screens */
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: none;
+    box-sizing: border-box;
+}
+
+.name-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.love-page-container .message-box {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border: none !important;
+}
+
+.back-arrow-btn {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: inherit;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50% !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10001;
+    box-sizing: border-box;
+}
+
+.back-arrow-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.message-box h1 {
+    font-size: clamp(3rem, 15vw, 6rem); /* Fluid font size */
+    margin: 0;
+    margin-bottom: clamp(15px, 3vh, 30px);
+    white-space: normal; /* Allow wrapping on small screens */
+    text-align: center;
+    overflow: visible;
+    text-overflow: clip;
+    color: inherit !important;
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: inherit !important;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+    cursor: pointer;
+    line-height: 1.2;
+}
+
+.tamil-poem {
+    color: inherit;
+    font-size: clamp(1rem, 4vw, 1.3rem); /* Fluid poem size */
+    line-height: 1.8;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    opacity: 0.95;
+    animation: fadeInPoem 2s ease-in-out;
+    padding: 0 10px;
+}
+
+.tamil-poem p {
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.tamil-poem p:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes fadeInPoem {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 0.95; transform: translateY(0); }
+}
+
+.interactive-love-box {
+    background: white;
+    padding: clamp(20px, 5vw, 40px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin: clamp(30px, 8vh, 60px) auto 40px;
+    width: 95%;
+    max-width: 450px;
+    text-align: center;
+    color: #333;
+    animation: fadeInPoem 1s ease-out 1s both;
+    box-sizing: border-box;
+}
+
+.interactive-love-box h2 {
+    font-size: 1.8rem;
+    color: #ff4d6d;
+    margin-bottom: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.interactive-love-box button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.yes-btn {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.yes-btn:hover {
+    background: #dee2e6;
+    transform: scale(1.05);
+}
+
+.no-btn {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.no-btn:hover {
+    background: #dee2e6;
+    transform: scale(1.05);
+}
+
+.response-state p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333 !important;
+    font-weight: 500;
+}
+
+.back-btn {
+    background: #6c757d;
+    color: white;
+    font-size: 0.9rem !important;
+    padding: 8px 20px !important;
+}
+
+.back-btn:hover {
+    background: #5a6268;
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+    .message-box h1 {
+        font-size: clamp(2.5rem, 15vw, 4.5rem);
+        white-space: normal;
+        text-align: center;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 480px) {
+    .message-box {
+        padding-top: 50px;
+    }
+
+    .tamil-poem {
+        line-height: 1.6;
+        padding: 0 5px;
+    }
+
+    .back-arrow-btn {
+        top: 0.8rem;
+        left: 0.8rem;
+        font-size: 1.2rem;
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .interactive-love-box {
+        padding: 8px 10px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border-radius: 12px;
+    }
+
+    .interactive-love-box h2 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .button-group {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .interactive-love-box button {
+        width: auto;
+        padding: 8px 15px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .message-box h1 {
+        font-size: 2.5rem;
+    }
+    
+    .back-arrow-btn {
+        top: 0.5rem;
+        left: 0.5rem;
+        font-size: 1.2rem;
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.heart-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #ff4d6d;
+}
+
+.back-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* Floating Hearts specifically for LovePage */
+.floating-hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.floating-heart {
+    position: absolute;
+    bottom: -50px;
+    color: #E85D75;
+    animation: none;
+    text-shadow: 0 0 10px rgba(232, 93, 117, 0.6);
+    opacity: 0.8;
+    transform-origin: center;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(-10vh) translateX(var(--sway)) scale(0.7) rotate(var(--rotation));
+        opacity: 0.7;
+    }
+    20% {
+        transform: translateY(-20vh) translateX(calc(var(--sway) * 0.8)) scale(0.8) rotate(calc(var(--rotation) * 0.9));
+        opacity: 0.8;
+    }
+    40% {
+        transform: translateY(-40vh) translateX(calc(var(--sway) * 0.5)) scale(0.9) rotate(calc(var(--rotation) * 0.7));
+        opacity: 0.8;
+    }
+    60% {
+        transform: translateY(-60vh) translateX(calc(var(--sway) * 0.3)) scale(1.0) rotate(calc(var(--rotation) * 0.5));
+        opacity: 0.8;
+    }
+    80% {
+        transform: translateY(-80vh) translateX(calc(var(--sway) * 0.1)) scale(1.1) rotate(calc(var(--rotation) * 0.3));
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-110vh) translateX(0) scale(1.2) rotate(0deg);
+        opacity: 0;
+    }
+}
+
+/* Helper for heart positioning */
+.floating-heart:nth-child(5n) {
+    --duration: 8s;
+    --left: 10%;
+}
+
+.floating-heart:nth-child(5n+1) {
+    --duration: 12s;
+    --left: 30%;
+}
+
+.floating-heart:nth-child(5n+2) {
+    --duration: 10s;
+    --left: 55%;
+}
+
+.floating-heart:nth-child(5n+3) {
+    --duration: 15s;
+    --left: 75%;
+}
+
+.floating-heart:nth-child(5n+4) {
+    --duration: 9s;
+    --left: 90%;
+}
