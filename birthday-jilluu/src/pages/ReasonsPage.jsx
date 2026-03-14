@@ -138,7 +138,7 @@ const ReasonsPage = ({ onBack, theme }) => {
                         <Page number={0}>
                             <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                                 <img
-                                    src="/z.jpg"
+                                    src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/z.jpg`}
                                     alt="Cover"
                                     style={{
                                         width: '100%',
@@ -188,7 +188,8 @@ const ReasonsPage = ({ onBack, theme }) => {
                         {images.map((imgSrc, index) => (
                             <Page key={index} number={index + 1}>
                                 <img
-                                    src={`/${imgSrc}`}
+                                <img
+                                    src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/${imgSrc}`}
                                     alt={`Memory ${index + 1}`}
                                     style={{
                                         width: '100%',

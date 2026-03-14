@@ -82,7 +82,7 @@ const CalendarPage = ({ onBack, theme }) => {
                         </p>
                         <div className="video-container">
                             <video
-                                src="/Video2.mp4"
+                                src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/Video2.mp4`}
                                 autoPlay
                                 muted
                                 loop
